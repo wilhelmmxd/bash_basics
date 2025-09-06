@@ -15,3 +15,11 @@ done
 
 # exercise: Loop over some type of files and use the 
 # "grep" UNIX command to find snippets of strings in them.
+
+# exercies solution:
+# loop through sh files and find instances of the keyword "echo"
+for file in *.sh; do
+    # use "grep" to search for the keyword "echo" in each sh file
+    # -H prints the name of the file and -n prints the line number where "echo" is found
+    grep -Hn "echo" "$file"
+done
